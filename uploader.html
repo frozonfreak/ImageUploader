@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Upload</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="css/style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<img src ="img/banner.png" id="headerImage">
+	<div class = "container">
+		<form class = "form-upload" id = "formupload" action = "upload_server.php" method="post" enctype="multipart/form-data">
+			<div class="form-header">
+				<h2 class="formheader">Submission Form</h2>
+			</div>
+			<label id="lblCaption" for="text">Caption:</label>
+			<input type="text" name="caption" id="caption" placeholder="Image Caption" ><br>
+			<!--<label id="lblDesc" for="text">Desc:</label>
+			<textarea name="desc" id="desc" placehold-->
+			<label id="lblCateg" for="select">Category:</label>
+			<select name ="category" id = "category" >
+		  		<option value="landscape">Landscape</option>
+		  		<option value="nature">Nature</option>
+		  		<option value="people">People</option>
+		  		<option value="animals">Animals</option>
+			</select><br>
+
+			<label id="lblFile" for="file">Filename:</label>
+			<input type="file" name="file" id="file" placeholder="FileName"><br>
+			<label id="lblTags" for="text">Tags:</label>
+			<input type="text" name="tags" id="tags" placeholder="Enter tags seperated by comma" ><br>
+			<button class="btn btn-primary" type="submit" id="submit">Submit</button>
+			<button class="btn" type ="button" id="cancel">Cancel</button>
+			<div id="loader"></div>
+		</form>
+	</div>
+<div class="container">
+
+ <div class="row">
+     <form class="well span8 offset2 custom-form">    
+        <div class="control-group">
+            <div class="controls">
+                <select class="span4" name="data[Number][country]" id="NumberCountry">
+                    <option>Choose a country code:</option>
+                    <option value="+44">+44</option>
+                    <option value="+81">+81</option>
+                    <option value="+1">+1</option>
+                    <option value="+70">+70</option>
+               </select>
+               <input type="text" class="input-small span2" placeholder="eg. 7764">
+               <input type="password" class="input-small span2" placeholder="eg. 123456">
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls center">
+                <button class="btn btn-large btn-primary">Activate Your SIM</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</div> <!-- /container -->
+</body>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/loader.js"></script>
+ <script src="js/noty/jquery.noty.js"></script>
+ <script src="js/noty/layouts/top.js"></script>
+ <script src="js/noty/themes/default.js"></script>
+</html>
+</html>
