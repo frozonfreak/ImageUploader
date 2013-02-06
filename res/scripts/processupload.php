@@ -17,7 +17,11 @@ if(isset($_POST))
 
 	if(!isset($_SESSION['userID']) || !isset($_SESSION['contestID']))
 			die('You need to login to submit');
-
+	else
+	{
+		$UserID 	= $_SESSION['userID'];
+		$ContestID  = $_SESSION['contestID'];
+	}
 
 	// check $_FILES['ImageFile'] array is not empty
 	// "is_uploaded_file" Tells whether the file was uploaded via HTTP POST
